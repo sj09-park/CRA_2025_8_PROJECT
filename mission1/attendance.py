@@ -79,14 +79,14 @@ def update_player_grade() -> None:
         else:
             player.grade = 'NORMAL'
 
-        print(f"NAME : {player.name}, POINT : {player.point}, GRADE : {player.grade}")
+        print(f"NAME : {player.player_name}, POINT : {player.point}, GRADE : {player.grade}")
 
 def show_removed_player() -> None:
     print("\nRemoved player")
     print("==============")
     for player in PLAYER_LIST:
         if player.grade == 'NORMAL' and player.wednesday_count == 0 and player.weekend_count == 0:
-            print(player.name)
+            print(player.player_name)
 
 
 if __name__ == "__main__":
